@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from './axios/axios';
 import './App.css';
+import Chart from './components/Chart';
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +24,6 @@ class App extends Component {
         chartData: data,
       });
     });
-    
   }
   
   render() {
@@ -35,11 +35,14 @@ class App extends Component {
           <h1>Tree Tracker</h1>
         </header>
         { loaded ? 
-          <ul>
-            { chartData.filter((event, i) => i < 25).map((trees) => (
-            <li>{ trees.value }, {trees.createdAt}</li>
-          )) } 
-          </ul>
+          <>
+            <ul>
+              { chartData.filter((event, i) => i < 25).map((trees) => (
+              <li>{ trees.value }, {trees.createdAt}</li>
+            )) } 
+            </ul>
+            <Chart />
+          </>
           :
           <p>Loading...</p>
         }
