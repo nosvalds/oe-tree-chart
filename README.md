@@ -54,6 +54,12 @@ You can now view come-on-you-team in the browser.
 }
 ```
 
+## If I had more time
+- [ ] Make it pretty
+- [ ] Refactor the format data function to store data in state as { Date: value} format rather than using a date string "YYYY-MM-DD"
+- [ ] A more user friendly filtering mechanism
+- [ ] Hover bubble shouldn't show the time of day
+
 # Create React App documentation
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

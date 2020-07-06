@@ -42,8 +42,7 @@ class App extends Component {
         startDate: days[days.length - 1], 
         endDate: days[0],
         chartData: {
-          labels: days, 
-          
+          labels: days,
           datasets: [
             {
               label: "Trees Planted",
@@ -51,7 +50,6 @@ class App extends Component {
               backgroundColor: '#43C185',
             }
         ]},
-        
       });
     });
   }
