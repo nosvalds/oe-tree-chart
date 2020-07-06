@@ -8,26 +8,27 @@ const DateFilter = ({ initStartDate, initEndDate, onApply }) =>  {
 
   return (
     <>
-      <DatePicker
+        <h3>Date Range Filter</h3>
+        <DatePicker
         selected={startDate}
         onChange={date => setStartDate(date)}
         selectsStart
         startDate={startDate}
         endDate={endDate}
-      />
-      <DatePicker
+        />
+        <DatePicker
         selected={endDate}
         onChange={date => setEndDate(date)}
         selectsEnd
         startDate={startDate}
         endDate={endDate}
         minDate={startDate}
-      />
-      <button
+        />
+        <button
         onClick={ () => onApply(startDate, endDate) }
-      >
+        >
         Apply
-    </button>
+        </button>
     </>
   );
 }

@@ -106,7 +106,6 @@ class App extends Component {
         {/* show loading message until we have the chart data in state */}
         { loaded ? 
           <>
-            <h3>Date Range</h3>
             <DateFilter 
               initStartDate={ startDate }
               initEndDate={ endDate }
