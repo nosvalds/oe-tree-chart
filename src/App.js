@@ -14,24 +14,28 @@ class App extends Component {
     };
   }
 
+  // called immediately after component mounts
   componentDidMount(){
     this.getChartData();
   }
 
   getChartData() {
+    // GET request for trees data
     axios.get("").then(({ data }) => {
+      // call out to helper function to get data into trees/day format
       let treeData = formatTreeData(data);
 
+      // set state with format for Chart.js
+      // set loaded = true since we have data to display the Chart component now
       this.setState({
         loaded: true,
         chartData: {
-          labels: Object.keys(treeData).map((day) => new Date(day)),
+          labels: Object.keys(treeData).map((day) => new Date(day)), // array of dates 
           datasets: [
             {
               label: "Trees Planted",
-              data: Object.values(treeData),
+              data: Object.values(treeData), // array of number of trees for each date
               backgroundColor: '#43C185',
-              // barThickness: 1,
             }
         ]}
       });
@@ -41,13 +45,38 @@ class App extends Component {
   render() {
     const { loaded, chartData } = this.state;
 
+    // Chart.js chart configuration options
+    const chartOptions = {
+      maintainAspectRatio: false,
+      title: {
+          display: true,
+          text: "Trees planted per day",
+          fontSize: 30,
+          fontColor: '#000'
+      },
+      scales: {
+          yAxes: [{
+              type: 'time',
+              time: {
+                  unit: 'day',
+              }
+          }]
+      }
+  }
+
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Tree Tracker</h1>
+          <h1>Reforestation Efforts</h1>
         </header>
+        {/* show loading message until we have the chart data in state */}
         { loaded ? 
-          <Chart chartData={ chartData } />
+          <Chart 
+            chartData={ chartData } 
+            chartOptions={ chartOptions }
+            width={ 600 }
+            height={ 5000 }
+          />
           :
           <p>Loading...</p>
         }
