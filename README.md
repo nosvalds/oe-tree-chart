@@ -1,5 +1,8 @@
 # Offset Earth - Developer Challenge
 
+## Deployed Location (github pages)
+https://nosvalds.github.io/oe-tree-chart/
+
 ## Set Up
 1. Clone the git repository to your local machine by running the following commands in your terminal.
 ```bash
