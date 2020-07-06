@@ -30,7 +30,8 @@ class App extends Component {
             {
               label: "Trees Planted",
               data: Object.values(treeData),
-              backgroundColor: '#43C185'
+              backgroundColor: '#43C185',
+              // barThickness: 1,
             }
         ]}
       });
@@ -46,14 +47,7 @@ class App extends Component {
           <h1>Tree Tracker</h1>
         </header>
         { loaded ? 
-          <>
-            {/* <ul>
-              { Object.keys(chartData).map((date, value) => (
-              <li key={ date }>{ date }: { value }</li>
-            )) } 
-            </ul> */}
-            <Chart chartData={ chartData } />
-          </>
+          <Chart chartData={ chartData } />
           :
           <p>Loading...</p>
         }

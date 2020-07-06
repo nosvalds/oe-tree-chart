@@ -6,7 +6,10 @@ const Chart = ({ chartData }) => {
         <div className="chart">
             <HorizontalBar
                 data={ chartData }
+                width={ 600 }
+                height={ 5000 }
                 options={{
+                    maintainAspectRatio: false,
                     title: {
                         display: true,
                         text: "Trees planted per day",
@@ -14,7 +17,7 @@ const Chart = ({ chartData }) => {
                         fontColor: '#000'
                     },
                     legend: {
-                        display: true, // legend
+                        display: false, // legend
                         position: "top",
                         labels: {
                             fontColor: '#000',
