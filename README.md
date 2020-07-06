@@ -29,6 +29,11 @@ You can now view come-on-you-team in the browser.
 ```
 5. Navigate to the "Local" URL from above in your favourite browser
 
+## Tips
+- Firefox worked well for me without CORS issues
+- If you're still having CORS issues you can use my Heroku cors-anywhere instance to get around them
+  - Just edit the baseURL ins axios.js to ```baseURL: "https://niks-cors-anywhere.herokuapp.com/https://api.offset.earth/trees"```
+
 ## API Updates/Feedback
 - Ideally the API would return the data in a # of trees/day format that I transform the data into in src/data/api.js. Doing this work in the front-end is probably an uncessary hit on performance that would impact user experience/load times.
 
