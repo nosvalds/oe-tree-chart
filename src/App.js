@@ -20,9 +20,19 @@ class App extends Component {
 
   getChartData() {
     axios.get("").then(({ data }) => {
+      let treeData = formatTreeData(data);
+
       this.setState({
         loaded: true,
-        chartData: formatTreeData(data),
+        chartData: {
+          labels: Object.keys(treeData).map((day) => new Date(day)),
+          datasets: [
+            {
+              label: "Trees Planted",
+              data: Object.values(treeData),
+              backgroundColor: '#43C185'
+            }
+        ]}
       });
     });
   }
@@ -37,12 +47,12 @@ class App extends Component {
         </header>
         { loaded ? 
           <>
-            <ul>
+            {/* <ul>
               { Object.keys(chartData).map((date, value) => (
               <li key={ date }>{ date }: { value }</li>
             )) } 
-            </ul>
-            <Chart />
+            </ul> */}
+            <Chart chartData={ chartData } />
           </>
           :
           <p>Loading...</p>

@@ -5,7 +5,7 @@ export const formatTreeData = (data) => {
     //     "YYYY-MM-DD": numTrees,
     //     "YYYY-MM-DD": numTrees,
     // }
-    return data.filter((v, i) => i < 1000).reduce((result, event) => {
+    return data.reduce((result, event) => {
         let dateTime = new Date(event.createdAt);
         let dateStr = `${dateTime.getFullYear()}-${dateTime.getMonth() + 1}-${dateTime.getDate()}`
         let value = event.value
