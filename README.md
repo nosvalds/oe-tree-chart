@@ -1,3 +1,57 @@
+# Offset Earth - Developer Challenge
+
+## Set Up
+1. Clone the git repository to your local machine by running the following commands in your terminal.
+```bash
+git clone git@github.com:nosvalds/oe-tree-chart.git {project-directory}
+```
+2. In your terminal cd into the project directory and run the below npm command to install neccessary dependency packages
+```bash
+cd {project-directory}
+npm install
+```
+3. In your terminal run the local development server provided by create-react-app to view on your local machine
+```bash
+npm start
+```
+
+4. You should see a message like this when the development server is up and running.
+```bash
+Compiled successfully!
+
+You can now view come-on-you-team in the browser.
+
+  Local:            http://localhost:3000/come-on-you-team
+  On Your Network:  http://192.168.0.96:3000/come-on-you-team
+```
+5. Navigate to the "Local" URL from above in your favourite browser
+
+## API Updates/Feedback
+- Ideally the API would return the data in a # of trees/day format that I transform the data into in src/data/api.js. Doing this work in the front-end is probably an uncessary hit on performance that would impact user experience/load times.
+
+```json
+{
+    "YYYY-MM-DD": numTrees,
+    "YYYY-MM-DD": numTrees,
+    ...
+}
+```
+
+- The back end might also consider paginating the data, so that we only get a months-worth of days back at a time. You could then add buttons on the front end to toggle to between months.
+
+```json
+{
+    "next": "https://api.offset.earth/trees?month=02",
+    "results": 
+        {
+            "YYYY-01-DD": numTrees,
+            "YYYY-01-DD": numTrees,
+            ...
+        }
+}
+```
+
+# Create React App documentation
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
