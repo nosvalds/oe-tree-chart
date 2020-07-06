@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/oe-tree-chart/static/css/main.8db714bf.chunk.css",
+    "main.js": "/oe-tree-chart/static/js/main.97c7f197.chunk.js",
+    "main.js.map": "/oe-tree-chart/static/js/main.97c7f197.chunk.js.map",
+    "runtime-main.js": "/oe-tree-chart/static/js/runtime-main.02924c37.js",
+    "runtime-main.js.map": "/oe-tree-chart/static/js/runtime-main.02924c37.js.map",
+    "static/js/2.300a79b2.chunk.js": "/oe-tree-chart/static/js/2.300a79b2.chunk.js",
+    "static/js/2.300a79b2.chunk.js.map": "/oe-tree-chart/static/js/2.300a79b2.chunk.js.map",
+    "index.html": "/oe-tree-chart/index.html",
+    "precache-manifest.e163d4d16f261c3d3d685b43297373da.js": "/oe-tree-chart/precache-manifest.e163d4d16f261c3d3d685b43297373da.js",
+    "service-worker.js": "/oe-tree-chart/service-worker.js",
+    "static/css/main.8db714bf.chunk.css.map": "/oe-tree-chart/static/css/main.8db714bf.chunk.css.map",
+    "static/js/2.300a79b2.chunk.js.LICENSE.txt": "/oe-tree-chart/static/js/2.300a79b2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.02924c37.js",
+    "static/js/2.300a79b2.chunk.js",
+    "static/css/main.8db714bf.chunk.css",
+    "static/js/main.97c7f197.chunk.js"
+  ]
+}
